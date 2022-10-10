@@ -3,11 +3,13 @@
  */
 export type Dynamic = string;
 
+export type BlockType = string;
+
 export default abstract class Block {
     id: 'block' = 'block';
-    block : Dynamic;
+    block : BlockType;
 
-    constructor(block : any) {
+    constructor(block : BlockType) {
         this.block = block;
     }
 }
