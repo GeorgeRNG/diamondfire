@@ -5,7 +5,13 @@ import Codeblock from "./Codeblock"
  */
 export default class Bracket extends Codeblock {
     id : 'bracket' = 'bracket';
+    /**
+     * Native storage for the bracket direction
+     */
     direct : direct;
+    /**
+     * Native storage for if a bracket is for a repeat or not
+     */
     type : type;
 
     constructor(direct : direct, type: type = 'norm') {
@@ -24,11 +30,12 @@ export default class Bracket extends Codeblock {
      */
     get repeat() { return this.sticky; }
     set repeat(repeat : boolean) { this.sticky = repeat; }
+
     /**
-     * If the bracket is normal type
+     * If the bracket is opening
      */
-    get normal(){ return !this.sticky }
-    set normal(normal : boolean){ this.sticky = !normal; }
+    get open() { return this.direct === 'open'; }
+    set open(open : boolean) { this.direct = open ? 'open' : 'close' }
 }
 
 /**
