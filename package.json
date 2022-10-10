@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/GeorgeRNG/diamondfire/issues"
   },
-  "homepage": "https://github.com/GeorgeRNG/diamondfire#readme"
+  "homepage": "https://github.com/GeorgeRNG/diamondfire#readme",
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
 }
